@@ -44,5 +44,4 @@ for split in test dev; do
     cat ${final_file} | sacrebleu -w 2 $REF/${split}.$TGT
 
 done
-done
-done
+
