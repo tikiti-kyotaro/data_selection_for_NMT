@@ -1,11 +1,11 @@
-DATA=/home/hwichan/jpBART/data
+DATA=/home/kyotaro/data_selection_for_NMT/data/wmt17_en_de
 
 echo 'binarize data'
 fairseq-preprocess \
-    --source-lang ko \
-    --target-lang ja \
-    --trainpref $DATA/train \
-    --validpref $DATA/dev \
-    --testpref  $DATA/test-n1 \
+    --source-lang en \
+    --target-lang de \
+    --trainpref /home/kyotaro/data_selection_for_NMT/data/train-random/700k/train.random \
+    --validpref $DATA/valid \
+    --testpref  $DATA/test \
     --joined-dictionary \
-    --destdir ko-ja
+    --destdir preprocess-random/en-de-700k-random
